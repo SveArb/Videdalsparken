@@ -53,8 +53,8 @@ var style_survey_1 = function(feature, resolution){
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "center";
-    var offsetX = 0;
-    var offsetY = -15;
+    var offsetX =-15;
+    var offsetY = 0;
     var placement = 'point';
     if (feature.get("Nr") !== null) {
         labelText = String(feature.get("Nr"));
