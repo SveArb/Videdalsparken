@@ -6,7 +6,7 @@ function categories_survey_1(feature, value, size, resolution, labelText,
                 var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
                 switch(valueStr) {case '1':
                     return [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 8.0 + size,
+        image: new ol.style.Circle({radius: 12.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(31,255,1,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -15,7 +15,7 @@ function categories_survey_1(feature, value, size, resolution, labelText,
                     break;
 case '2':
                     return [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 8.0 + size,
+        image: new ol.style.Circle({radius: 12.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(104,194,216,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -24,7 +24,7 @@ case '2':
                     break;
 case '3':
                     return [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 8.0 + size,
+        image: new ol.style.Circle({radius: 12.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(232,255,61,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -33,7 +33,7 @@ case '3':
                     break;
 case '4':
                     return [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 8.0 + size,
+        image: new ol.style.Circle({radius: 12.0 + size,
             displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(255,0,4,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
@@ -48,13 +48,13 @@ var style_survey_1 = function(feature, resolution){
     };
     
     var labelText = ""; var value = feature.get("risk");
-    var labelFont = "6.5px \'Open Sans\', sans-serif";
+    var labelFont = "9.1px \'Open Sans\', sans-serif";
     var labelFill = "#323232";
     var bufferColor = "";
     var bufferWidth = 0;
-    var textAlign = "center";
-    var offsetX =-15;
-    var offsetY = 0;
+    var textAlign = textAlign;
+    var offsetX = offsetX;
+    var offsetY = offsetY;
     var placement = 'point';
     if (feature.get("Nr") !== null) {
         labelText = String(feature.get("Nr"));
